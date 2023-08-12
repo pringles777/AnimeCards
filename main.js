@@ -14,7 +14,7 @@ let game_is_running = true;
 btn.textContent = 'Начать игру';
 timer.textContent = time + 'sec';
 input.type = 'number';
-input.value = 4;
+input.value = '4';
 input.setAttribute('step', 2);
 input.setAttribute('min', 2);
 input.setAttribute('max', 8);
@@ -30,7 +30,11 @@ btn.addEventListener('click', function () {
   openedTrue = [];
   let count = input.value;
 
-  if (2 < count < 8 && count % 2 || count == '') {
+  if (input.value > 8) {
+    count = 4;
+    input.value = count;
+  }
+  else if (2 < count < 8 && count % 2 || count == '') {
     count = 4;
     input.value = count;
   }
@@ -171,7 +175,7 @@ class Card {
   }
   get open() { }
   set success(value) {
-    if(value){
+    if (value) {
       openedTrue.push(this);
     }
   }
