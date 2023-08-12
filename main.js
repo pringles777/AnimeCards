@@ -147,8 +147,8 @@ class Card {
     this.imgBack = document.createElement('img');
     this.img.classList.add('rounded', 'img-fluid', 'd-none');
     this.imgBack.classList.add('rounded', 'img-fluid', 'imgBack');
-    this.img.src = '/bg/' + this.cardNumber + '.jpg';
-    this.imgBack.src = '/bg/0.jpg';
+    this.img.src = 'bg/' + this.cardNumber + '.jpg';
+    this.imgBack.src = 'bg/0.jpg';
     this.imgBack.style.cssText = 'cursor: pointer;'
     card.appendChild(this.img);
     card.appendChild(this.imgBack);
